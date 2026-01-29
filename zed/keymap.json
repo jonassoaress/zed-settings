@@ -1,0 +1,60 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-enter": ["terminal::SendText", "\\\r\n"],
+      "shift-enter": ["terminal::SendText", "\\\r\n"],
+      "ctrl-q": "workspace::ToggleLeftDock",
+    },
+  },
+
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-d": "editor::GoToDefinition",
+      "f12": "zed::NoAction",
+
+      "ctrl-k ctrl-c": "zed::NoAction",
+      "ctrl-k ctrl-u": "zed::NoAction",
+
+      "ctrl-shift-s": "workspace::SaveAll",
+      "ctrl-shift-alt-s": "workspace::SaveAs",
+
+      "ctrl-k p": "pane::CloseOtherItems",
+
+      "ctrl-alt-up": "zed::NoAction",
+      "ctrl-alt-down": "zed::NoAction",
+
+      "ctrl-alt-2": "editor::AddSelectionBelow",
+      "ctrl-alt-8": "editor::AddSelectionAbove",
+
+      "ctrl-]": "editor::Indent",
+
+      "ctrl-shift-up": "editor::SelectToStartOfParagraph",
+      "ctrl-shift-down": "editor::SelectToEndOfParagraph",
+
+      "ctrl-alt-up": "editor::AddSelectionAbove",
+      "ctrl-alt-down": "editor::AddSelectionBelow",
+
+      "ctrl-q": "workspace::ToggleLeftDock",
+      "ctrl-shift-q": "workspace::CloseWindow",
+      "ctrl-q e": "workspace::ToggleLeftDock", // Explorer
+      "ctrl-q s": "pane::DeploySearch", // Search
+    },
+  },
+
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-d": "zed::NoAction",
+      "ctrl-q": "workspace::ToggleLeftDock",
+    },
+  },
+]
